@@ -1,12 +1,33 @@
-<div fxFill>
+<div fxLayout="column" class="contact-block">
   <div>
     <div fxFlex="10"></div>
     <div fxFlex="80">
-      <h1>Contact Me</h1>&nbsp;&nbsp;
-      <mat-form-field>
-        <mat-label>name</mat-label>
-        <input matInput value="">
-      </mat-form-field>
+      <h1>Contact Me</h1>
+      <div fxLayout="row">
+        <mat-form-field fxFlex="32">
+          <mat-label>name</mat-label>
+          <input matInput placeholder="signed," [formControl]="nameControl">
+        </mat-form-field>
+        <div fxFlex></div>
+        <mat-form-field fxFlex="64">
+          <mat-label>email address</mat-label>
+          <input matInput placeholder="...@snailmail.com" [formControl]="emailAddressControl">
+        </mat-form-field>
+        <div fxFlex></div>
+      </div>
+      <div fxLayout="row">
+        <mat-form-field fxFlex="90">
+          <mat-label>your comment</mat-label>
+          <textarea matInput #input maxlength="512" rows="8" style="resize: none;" 
+          placeholder="Ex. This website brings a smile to my face because..." [formControl]="messageAreaControl"></textarea>
+          <mat-hint align="end">{{ input.value?.length || 0 }}/512 chars<span class="blinking">|</span></mat-hint>
+        </mat-form-field>&nbsp;
+        <div matLine class="character-box">
+          <button mat-icon-button color="accent" (click)="sendMessage()">
+            <mat-icon>send</mat-icon>
+          </button>
+        </div>
+      </div>
     </div>
     <div fxFlex="10"></div>
   </div>

@@ -1,16 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-carousel-portfolio',
   templateUrl: './carousel-portfolio.component.html',
   styleUrls: ['./carousel-portfolio.component.scss']
 })
-export class CarouselPortfolioComponent implements OnInit {
+export class CarouselPortfolioComponent implements OnInit, AfterViewInit {
 
-  constructor() {
+  constructor(private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit() {
   }
 
+  ngAfterViewInit(): void {
+    this.cdr.detectChanges(); // detect changes for mat-carasoul
+  }
 }

@@ -10,12 +10,17 @@ import { HeaderComponent } from './header/header.component';
 import { UiCarouselModule } from 'ngx-ui-carousel';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 
-import { MatButtonModule,
-         MatInputModule,
-         MatToolbarModule,
-         MatIconModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatInputModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatGridListModule
+} from '@angular/material';
 import { CarouselPortfolioComponent } from './carousel-portfolio/carousel-portfolio.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
+import { FindMeComponent } from './find-me/find-me.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,8 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
     HomeComponent,
     HeaderComponent,
     CarouselPortfolioComponent,
-    ContactMeComponent
+    ContactMeComponent,
+    FindMeComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +41,9 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
     MatToolbarModule,
     UiCarouselModule,
     MatIconModule,
+    MatGridListModule,
+    ReactiveFormsModule,
+    FormsModule,
     MatCarouselModule.forRoot(),
   ],
   providers: [],
