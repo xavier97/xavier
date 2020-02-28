@@ -1,0 +1,23 @@
+<!-- <ngx-ui-carousel [infinite]="true" [fade]="false" [speed]="1500" [height]="'50vh'">
+  <ngx-ui-carousel-item>
+    <div>
+      <div class="image-container">
+        <img src="../../assets/img/res-extensa-cover.png">
+      </div>
+    </div>
+  </ngx-ui-carousel-item>
+  <ngx-ui-carousel-item>
+    <div class="image-container">
+      <img src="../../assets/img/res-extensa-cover.png">
+    </div>
+  </ngx-ui-carousel-item>
+</ngx-ui-carousel> -->
+
+<mat-carousel proportion="25" slides="5" [loop]="true" [hideArrows]="false" [hideIndicators]="false"
+  [useKeyboard]="true" timings="250ms ease-in" [autoplay]="true" interval="5000"  orientation="ltr">
+  <mat-carousel-slide [image]="'../../assets/img/resExstensa.jpg'">
+  </mat-carousel-slide>
+  <!-- Fix this... -->
+  <mat-carousel-slide [image]="'../../assets/img/resExstensa.png'">
+  </mat-carousel-slide>
+</mat-carousel>
