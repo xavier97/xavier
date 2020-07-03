@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-find-me',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./find-me.component.scss']
 })
 export class FindMeComponent implements OnInit {
+
+  // @ViewChild('test', {static: true}) test: el : ElementRef;
 
   constructor() { }
 

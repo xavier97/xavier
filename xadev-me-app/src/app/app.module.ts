@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { UiCarouselModule } from 'ngx-ui-carousel';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import {
   MatButtonModule,
@@ -45,6 +46,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
     MatCarouselModule.forRoot(),
+    MDBBootstrapModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,13 @@
+<div>
   <app-header></app-header>
-  <div fxLayout="column">
-    <app-home></app-home>
-    <br>
-    <app-contact-me></app-contact-me>
-    <app-find-me></app-find-me>
-    <!-- Add more components here -->
+  <div fxFill>
+    <app-carousel-portfolio></app-carousel-portfolio>
   </div>
+  <div fxLayout="row">
+    <app-home fxFlex="50"></app-home>
+    <app-contact-me fxFlex="50"></app-contact-me>
+  </div>
+  <!-- <app-find-me></app-find-me> -->
+  <!-- Add more components here -->
   <router-outlet></router-outlet>
+</div>
