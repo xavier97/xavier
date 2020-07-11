@@ -14,9 +14,7 @@ export class ContactMeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-console.log('hello');
-  }
+  ngOnInit() {  }
 
   sendMessage(): void  {
     // TODO : Send message to API

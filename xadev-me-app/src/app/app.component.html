@@ -3,14 +3,17 @@
   <div fxFill>
     <app-carousel-portfolio></app-carousel-portfolio>
   </div>
-  <div fxLayout="row">
-    <div fxFlex="52">
+  <div fxLayout="row wrap">
+    <div fxFlex.lt-md="100" fxFlex.md="100" fxFlex.gt-md="52">
       <app-home></app-home>
     </div>
-    <div fxFlex="48" style="align-self: center;">
+    <div fxFlex.lt-md="100" fxFlex.md="100" fxHide.md fxHide.lg fxHide.xl style="align-self: center;">
+      <app-find-me></app-find-me>
+    </div>
+    <div fxFlex></div>
+    <div fxFlex.lt-md="100" fxFlex.md="100" fxFlex.gt-md="48" style="align-self: center;">
       <app-contact-me></app-contact-me>
     </div>
   </div>
-  <!-- Add more components here -->
   <router-outlet></router-outlet>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FilePreviewOverlayService } from '../file-preview-overlay.service';
 import { FilePreviewOverlayRef } from '../file-preview-overlay-ref';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 const ESCAPE = 27;
 
@@ -11,9 +12,21 @@ const ESCAPE = 27;
 })
 export class FindMeComponent implements OnInit {
 
-  constructor(private overlaySvc: FilePreviewOverlayService) { }
+  isSmallScreen: boolean;
 
-  ngOnInit() { }
+  constructor(private overlaySvc: FilePreviewOverlayService, private breakpointObserver: BreakpointObserver) { }
+
+  ngOnInit() {
+    this.breakpointObserver.observe([
+      '(max-width: 650px)'
+    ]).subscribe(result => {
+      if (result.matches) {
+        this.isSmallScreen = true;
+      } else {
+        this.isSmallScreen = false;
+      }
+    });
+  }
 
   open(site: string) {
     let url: string;
@@ -40,7 +53,11 @@ export class FindMeComponent implements OnInit {
   }
 
   openResume() {
-    const dialogRef: FilePreviewOverlayRef = this.overlaySvc.openResume();
+    if (this.isSmallScreen) {
+      window.open('../assets/pdf/Xavier_Resume_2020.pdf', '_blank');
+    } else {
+      const dialogRef: FilePreviewOverlayRef = this.overlaySvc.openResume();
+    }
   }
 
 }
