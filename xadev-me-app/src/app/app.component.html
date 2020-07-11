@@ -4,10 +4,13 @@
     <app-carousel-portfolio></app-carousel-portfolio>
   </div>
   <div fxLayout="row">
-    <app-home fxFlex="50"></app-home>
-    <app-contact-me fxFlex="50"></app-contact-me>
+    <div fxFlex="52">
+      <app-home></app-home>
+    </div>
+    <div fxFlex="48" style="align-self: center;">
+      <app-contact-me></app-contact-me>
+    </div>
   </div>
-  <!-- <app-find-me></app-find-me> -->
   <!-- Add more components here -->
   <router-outlet></router-outlet>
 </div>

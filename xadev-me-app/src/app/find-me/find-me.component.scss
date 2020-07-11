@@ -7,6 +7,16 @@
     color: white;
 }
 
-.test-icon {
+.find-me-icon {
     margin: 8px;
+    opacity: .72;
 }
+
+.find-me-icon:focus {
+    outline: none;
+    border: 0;
+ }
+
+ .find-me-icon:hover {
+    opacity: 1;
+ }
