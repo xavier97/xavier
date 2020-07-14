@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ResumeComponent } from './resume/resume.component';
-import { UiCarouselModule } from 'ngx-ui-carousel';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -46,7 +45,6 @@ import { OverlayModule } from '@angular/cdk/overlay';
     MatInputModule,
     MatToolbarModule,
     MatTooltipModule,
-    UiCarouselModule,
     MatIconModule,
     MatGridListModule,
     ReactiveFormsModule,

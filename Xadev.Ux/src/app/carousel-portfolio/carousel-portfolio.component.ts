@@ -14,6 +14,6 @@ export class CarouselPortfolioComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.cdr.detectChanges(); // detect changes for mat-carasoul
+    this.cdr.detectChanges(); // detect changes for mat-carousel
   }
 }

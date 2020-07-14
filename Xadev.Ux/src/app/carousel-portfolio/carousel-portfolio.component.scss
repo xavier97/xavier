@@ -1,0 +1,24 @@
+.image-container {
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // z-index: 2;
+  // padding: 20px;
+  text-align: center;
+  margin: auto;
+  padding: 50px 0;
+  text-align: center;
+}
+
+::ng-deep .carousel {
+  height: 50vh !important;
+}
+
+::ng-deep .carousel-slide {
+  height: 50vh !important;
+}
+
+::ng-deep .carousel-indicators {
+  margin: 0;
+}

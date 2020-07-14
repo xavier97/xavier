@@ -3,13 +3,13 @@
     <div fxFlex="10"></div>
     <div fxFlex="80" style="margin: 16px 0;">
       <h1>Contact Me</h1>
-      <div fxLayout="row">
-        <mat-form-field fxFlex="32">
+      <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+        <mat-form-field fxFlex.lt-md="100" fxFlex.gt-sm="32">
           <mat-label>Name</mat-label>
           <input matInput placeholder="signed," [formControl]="nameControl">
         </mat-form-field>
         <div fxFlex></div>
-        <mat-form-field fxFlex="64">
+        <mat-form-field fxFlex.lt-md="100" fxFlex.gt-sm="64">
           <mat-label>Email Address</mat-label>
           <input matInput placeholder="...@snailmail.com" [formControl]="emailAddressControl">
         </mat-form-field>
