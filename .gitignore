@@ -45,3 +45,8 @@ testem.log
 .DS_Store
 Thumbs.db
 *.code-workspace
+
+# App Settings
+**/appsettings.development.json
+**/appsettings.staging.json
+**/appsettings.production.json
