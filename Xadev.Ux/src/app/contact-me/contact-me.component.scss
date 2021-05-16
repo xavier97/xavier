@@ -1,0 +1,52 @@
+.blinking {
+  animation: blinkingText 1.2s infinite;
+}
+
+@keyframes blinkingText {
+  0% {
+    color: rgba(255, 255, 255, .7);
+  }
+
+  // mat-hint text color
+  49% {
+    color: rgba(255, 255, 255, .7);
+  }
+
+  60% {
+    color: transparent;
+  }
+
+  99% {
+    color: transparent;
+  }
+
+  100% {
+    color: rgba(255, 255, 255, .7);
+  }
+}
+
+.character-box {
+  font-size: 8px;
+  margin-top: 147px;
+}
+
+.contact-block {
+  background-color: maroon;
+  padding: 8px;
+  border-radius: 32px;
+  margin: 16px;
+}
+
+// Note: Might be good to just create my own theme...
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-ripple,
+.mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent {
+  background-color: lightseagreen;
+}
+
+::ng-deep .mat-error {
+  color: lightseagreen;
+}
+
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: lightseagreen;
+}

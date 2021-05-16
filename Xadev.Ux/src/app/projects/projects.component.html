@@ -1,0 +1,111 @@
+<div class="project-container">
+  <div style="width:100%; height:50vh; background-color:slategrey;">
+    <!-- App specific screenshots and info -->
+    <p style="line-height: 50vh; text-align: center;">[ Screenshots coming soon! ]</p>
+  </div>
+  <div fxLayout="row wrap">
+    <div fxFlex.lt-md="100" fxFlex.md="100" fxFlex.gt-md="52">
+      <div class="home-block" fxLayout="row">
+        <div fxFlex style="margin-left: 2em;">
+          <h1 style="display: inline-block">{{ projectName }}</h1>&nbsp;&nbsp;
+          <h3 style="display: inline-block">{{ projectSubtitle }}</h3>
+          <p style="margin: 0; font-size: 24px;" [innerHtml]="projectDescription"></p>
+        </div>
+      </div>
+    </div>
+    <div fxFlex></div>
+    <div fxFlex.lt-md="100" fxFlex.md="100" fxFlex.gt-md="48" style="align-self: center; text-align: center;">
+      <!-- App specific info -->
+      <div *ngIf="projectId === 'PKMN_EV'">
+        <img class="pkmn-ev-logo" src="../../assets/img/pkmnEVIcon.png" alt="PKMN EV app icon">
+        <br />
+        <img class="app-store-logo" src="../../assets/img/appStore.png" alt="Apple app store logo" />
+        <br>
+        <a (click)="openDialog(privacyPolicyTemplate)">Privacy Policy</a>
+        &nbsp;|&nbsp;
+        <a (click)="openDialog(copyrightNoticeTemplate)">Copyright Notice</a>
+      </div>
+      <div *ngIf="projectId === 'RES_EXTENSA'">
+        <div>
+          <a href="../../assets/res-extensa-site/play.html" target="_blank">Play In Browser&nbsp;
+            <mat-icon>open_in_new</mat-icon></a>
+        </div>
+        <br>
+        <div>
+          <a href="../../assets/res-extensa-site/Res Extensa.gblorb" target="_blank">Download Story File (.gblorb,
+            596KB)&nbsp;
+            <mat-icon>download</mat-icon></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #privacyPolicyTemplate>
+  <h1 mat-dialog-title>PKMN EV Privacy Policy</h1>
+  <div mat-dialog-content>
+    <p>
+      Your privacy is important to us.</p>
+    <p>
+      It is XADEV's policy to respect your privacy regarding any information we may collect from you across our
+      application, PKMN EV, and other sites and apps we own and operate.
+    </p>
+    <p>
+      We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and
+      lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be
+      used.
+    </p>
+    <p>
+      We only retain collected information for as long as necessary to provide you with your requested service. What
+      data
+      we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized
+      access, disclosure, copying, use or modification.
+    </p>
+    <p>
+      We don’t share any personally identifying information publicly or with third-parties, except when required to by
+      law.
+    </p>
+    <p>
+      Our app may link to external sites that are not operated by us. Please be aware that we have no control over the
+      content and practices of these sites, and cannot accept responsibility or liability for their respective privacy
+      policies.
+    </p>
+    <p>
+      You are free to refuse our request for your personal information, with the understanding that we may be unable to
+      provide you with some of your desired services.
+    </p>
+    <p>
+      Your continued use of our website and mobile application will be regarded as acceptance of our practices around
+      privacy and personal
+      information. If you have any questions about how we handle user data and personal information, feel free to
+      contact us at <a target="_blank" href="https://www.xadev.me">https://www.xadev.me</a>.
+    </p>
+  </div>
+  <div mat-dialog-actions>
+    <div fxFlex></div>
+    <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+  </div>
+</ng-template>
+
+<ng-template #copyrightNoticeTemplate>
+  <h1 mat-dialog-title>PKMN EV Privacy Policy</h1>
+  <div mat-dialog-content>
+    <p>
+      This educational work constitutes a fair-use of any copyrighted material as provided for in <a target="_blank"
+        href="https://www.copyright.gov/title17/92chap1.html#107">section 107 of the US
+        copyright law</a>.
+    </p>
+    <p>
+      Pokémon © 2002-2020 Pokémon. © 1995-2020 Nintendo/Creatures Inc./GAME FREAK inc. TM, ® and Pokémon
+      character names are trademarks of Nintendo.
+    </p>
+    <p>
+      No copyright or trademark infringement is intended in using Pokémon content in PKMN EV.
+    </p>
+  </div>
+  <div mat-dialog-actions>
+    <div fxFlex></div>
+    <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+  </div>
+</ng-template>

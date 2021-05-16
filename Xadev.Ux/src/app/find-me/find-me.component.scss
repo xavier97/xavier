@@ -1,0 +1,21 @@
+.side-link-bar {
+    background-color: grey;
+    border-radius: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: white;
+}
+
+.find-me-icon {
+    margin: 8px;
+    opacity: .72;
+}
+
+.find-me-icon:focus {
+    outline: none;
+    border: 0;
+ }
+
+ .find-me-icon:hover {
+    opacity: 1;
+ }

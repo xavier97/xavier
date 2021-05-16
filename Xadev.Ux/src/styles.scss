@@ -1,0 +1,24 @@
+html,
+body {
+  height: 100%;
+  top: 0 !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Exo', sans-serif;
+  background-color: #666666;
+  font-size: 16px;
+  color: white;
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  &.dark-backdrop {
+    background: #301934;
+    opacity: 0.5 !important;
+  }
+}
+
+.home-block {
+  margin: 24px;
+}

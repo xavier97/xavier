@@ -1,0 +1,14 @@
+<mat-toolbar style="height:120px; min-height:100px;">
+  <div fxLayout="row" class="toolbar-logo" [routerLink]="['']">
+    <img class="large-screen" src="../assets/img/XADEVLogo.png" style="padding-right: 32px;">
+    <!-- <img class="small-screen" src="../assets/img/XADEVLogoSmall.png" style="padding-right: 16px;"> -->
+    <div fxFlex="40">XADEV.ME</div>
+  </div>
+
+  <div fxFlex="50"></div>
+
+  <!-- Mobile Menu -->
+  <button mat-icon-button [ngClass]="{'large-screen': isMobile, 'small-screen': !isMobile}">
+    <mat-icon>dehaze</mat-icon>
+  </button>
+</mat-toolbar>

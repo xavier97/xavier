@@ -5,6 +5,7 @@
 **/tmp/
 **/out-tsc/
 **/bin/
+**/obj/
 # Only exists if Bazel was run
 **/bazel-out
 
@@ -51,3 +52,8 @@ Thumbs.db
 **/appsettings.development.json
 **/appsettings.staging.json
 **/appsettings.production.json
+
+# Certs
+**/xadev_me_certs/
+**/*.pfx
+**/certs/

@@ -1,0 +1,49 @@
+<div fxLayout="column" class="contact-block">
+  <div>
+    <div fxFlex="10"></div>
+    <div fxFlex="80" style="margin: 16px 0;">
+      <h1>Contact Me</h1>
+      <div fxLayout.lt-md="column" fxLayout.gt-sm="row">
+        <mat-form-field fxFlex.lt-md="100" fxFlex.gt-sm="32">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Sincerely," [formControl]="nameControl">
+          <mat-error *ngIf="nameControl.hasError('required')">
+            Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <div fxFlex></div>
+        <mat-form-field fxFlex.lt-md="100" fxFlex.gt-sm="64">
+          <mat-label>Email Address</mat-label>
+          <input matInput placeholder="...@snailmail.com" [formControl]="emailAddressControl">
+          <mat-error *ngIf="emailAddressControl.hasError('email') && !emailAddressControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailAddressControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <div fxFlex></div>
+      </div>
+      <div fxLayout="row">
+        <mat-form-field fxFlex="90">
+          <mat-label>Your Comment</mat-label>
+          <textarea matInput #input maxlength="512" rows="8" style="resize: none;" placeholder="....."
+            [formControl]="messageAreaControl"></textarea>
+          <mat-error *ngIf="messageAreaControl.hasError('required')">
+            Comment is <strong>required</strong>
+          </mat-error>
+          <mat-hint align="end">{{ input.value?.length || 0 }}/512 chars<span class="blinking">|</span></mat-hint>
+        </mat-form-field>&nbsp;
+        <div matLine class="character-box">
+          <button mat-icon-button color="accent" (click)="onClickEmail()" [disabled]="isLoading">
+            <mat-icon>send</mat-icon>
+          </button>
+        </div>
+        <div *ngIf="isLoading" matLine style="margin-top: 157px;">
+          <mat-spinner [diameter]="24"></mat-spinner>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="10"></div>
+  </div>
+</div>

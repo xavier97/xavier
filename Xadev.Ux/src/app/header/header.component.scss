@@ -1,0 +1,20 @@
+@media only screen and (max-width: 415px) {
+  .large-screen {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 415px) {
+  .small-screen {
+    display: none;
+  }
+}
+
+.toolbar-logo {
+  align-items: center
+}
+
+.toolbar-logo:focus {
+  outline: none;
+  border: 0;
+}
